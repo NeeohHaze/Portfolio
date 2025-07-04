@@ -27,7 +27,7 @@ function Projects() {
         { opacity: 0 },
         {
           opacity: 1,
-          duration: 0.05,
+          duration: 3,
           stagger: 0.05,
           ease: 'power2.out',
           scrollTrigger: {

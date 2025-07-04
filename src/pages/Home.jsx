@@ -84,7 +84,7 @@ function Home() {
         <div className="intro-text">
           <h1 className="header-text">I am Thukha Minthwin</h1>
           <p>I am from Rangsit University, passionate about creating modern and engaging web experiences.</p>
-          <button className="fun-button"><a href="projects" className='extra'>Explore My Work</a></button>
+          <button className="fun-button"><a href="tkmt/projects" className='extra'>Explore My Work</a></button>
         </div>
       </div>
     </div>
