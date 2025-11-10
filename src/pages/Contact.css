@@ -1,8 +1,8 @@
 .contact {
   padding: 50px 20px;
   position: relative;
-  background: #1a1a2e; /* Fallback background */
-  min-height: 100vh; /* Full viewport height */
+  background: #1a1a2e;
+  min-height: 100vh;
 }
 
 .contact-section {
@@ -11,7 +11,7 @@
   justify-content: center;
   flex-direction: column;
   position: relative;
-  z-index: 1; /* Above particles */
+  z-index: 1; 
 }
 
 .contact-text {

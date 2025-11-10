@@ -2,7 +2,7 @@
   padding: 40px 20px;
   text-align: center;
   position: relative;
-  background: #1a1a2e; /* Fallback background */
+  background: #1a1a2e; 
 }
 
 .header-text {
@@ -18,7 +18,7 @@
 }
 
 .project-content {
-  max-width: 800px; /* Increased for image space */
+  max-width: 800px; 
   margin: 0 auto;
   text-align: left;
   position: relative;
@@ -58,7 +58,8 @@
   transform: translateX(5px);
 }
 
-.ricgaming {
+.ricgaming,
+.gamestore {
   text-decoration: none;
   color: #e0e0e0;
   transition: color 0.3s ease, text-shadow 0.3s ease;
@@ -74,10 +75,36 @@
   transform: translateX(50px);
   position: relative;
   background-image: url(../images/faqpage.png);
-  
+  background-size: cover;
+  background-position: center;
 }
+
 .image-placeholder::after {
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #b0b0cc;
+  font-size: 1.2rem;
+}
+
+.gamestore-image-placeholder {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(135deg, #2a2a4e 0%, #1a1a2e 100%);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+  opacity: 0;
+  transform: translateX(50px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url(../images/GameStore.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.gamestore-image-placeholder::after {
   display: flex;
   align-items: center;
   justify-content: center;

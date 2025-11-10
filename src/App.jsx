@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import Home from './pages/Home';
@@ -16,21 +16,21 @@ function AppContent() {
   useEffect(() => {
     const page = pageRef.current;
 
-    // Define the swipe animation timeline
+    
     const tl = gsap.timeline();
 
-    // Slide in the new page from the right
+   
     tl.fromTo(
       page,
       { x: '100%', opacity: 0 },
       { x: '0%', opacity: 1, duration: 0.8, ease: 'power3.out' }
     );
 
-    // Cleanup to prevent overlapping animations
+  
     return () => {
       tl.kill();
     };
-  }, [location.pathname]); // Trigger animation on route change
+  }, [location.pathname]); 
 
   return (
     <div className="app">
@@ -42,11 +42,12 @@ function AppContent() {
         <Link to="/contact" className="nav-link">Contact</Link>
       </nav>
       <div className="page" ref={pageRef}>
-        <Routes>
+       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
       <Footer />
@@ -56,7 +57,7 @@ function AppContent() {
 
 function App() {
   return (
-    <Router basename="/tkmt"> 
+    <Router basename="/"> 
       <AppContent />
     </Router>
   );

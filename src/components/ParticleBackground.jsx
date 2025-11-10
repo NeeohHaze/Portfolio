@@ -15,12 +15,12 @@ function ParticleBackground() {
   const particlesOptions = {
     background: {
       color: {
-        value: '#1a1a2e', // Match dark theme
+        value: '#1a1a2e',
       },
     },
     particles: {
       number: {
-        value: 40, // Reduced for performance
+        value: 40,
         density: {
           enable: true,
           value_area: 1000,
@@ -42,7 +42,7 @@ function ParticleBackground() {
       },
       move: {
         enable: true,
-        speed: 0.3, // Slower for subtlety
+        speed: 0.3,
         direction: 'none',
         random: false,
         straight: false,

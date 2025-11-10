@@ -8,9 +8,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Projects() {
   const imagePlaceholderRef = useRef(null);
+  const gameStoreImageRef = useRef(null);
 
   useEffect(() => {
-    // Typewriter effect for header
+  
     const header = document.querySelector('.header-text');
     if (header) {
       const text = header.textContent;
@@ -38,7 +39,7 @@ function Projects() {
       );
     }
 
-    // Animate project content
+   
     gsap.fromTo(
       '.project-content',
       { opacity: 0, y: 50 },
@@ -54,7 +55,7 @@ function Projects() {
       }
     );
 
-    // Hover effect for RIC Gaming link
+    
     const ricGamingLink = document.querySelector('.ricgaming');
     const imagePlaceholder = imagePlaceholderRef.current;
 
@@ -87,6 +88,40 @@ function Projects() {
         duration: 0.3,
       });
     });
+
+    
+    const gameStoreLink = document.querySelector('.gamestore');
+    const gameStoreImage = gameStoreImageRef.current;
+
+    gameStoreLink.addEventListener('mouseenter', () => {
+      gsap.to(gameStoreImage, {
+        opacity: 1,
+        x: 0,
+        duration: 0.5,
+        ease: 'power2.out',
+      });
+      gsap.to(gameStoreLink, {
+        scale: 1.05,
+        color: '#00d4ff',
+        textShadow: '0 0 10px rgba(0, 212, 255, 0.5)',
+        duration: 0.3,
+      });
+    });
+
+    gameStoreLink.addEventListener('mouseleave', () => {
+      gsap.to(gameStoreImage, {
+        opacity: 0,
+        x: 50,
+        duration: 0.5,
+        ease: 'power2.out',
+      });
+      gsap.to(gameStoreLink, {
+        scale: 1,
+        color: '#e0e0e0',
+        textShadow: 'none',
+        duration: 0.3,
+      });
+    });
   }, []);
 
   return (
@@ -102,8 +137,14 @@ function Projects() {
                 RIC Gaming Club Website: Website focusing on FAQ page and Chatbot for RIC Gaming Club
               </a>
             </li>
+            <li>
+              <a href="https://www.figma.com/design/Pw9EmEIQzOf83hBlaPKUuC/Video-Games-Store?node-id=0-1&p=f&t=Oc0Qs5e5IIkzoJb3-0" className="gamestore">
+                Game Store Website: UI design using Figma with various views for different devices
+              </a>
+            </li>
           </ul>
           <div className="image-placeholder" ref={imagePlaceholderRef}></div>
+          <div className="gamestore-image-placeholder" ref={gameStoreImageRef}></div>
         </div>
       </div>
     </div>

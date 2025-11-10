@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
   useEffect(() => {
-    // Split header text into letters for animation
+    
     const header = document.querySelector('.header-text');
     if (header) {
       const letters = header.textContent.split('');
@@ -20,7 +20,7 @@ function Home() {
         header.appendChild(span);
       });
 
-      // Animate letters
+      
       gsap.fromTo(
         '.letter',
         { opacity: 0, y: 20 },
@@ -38,21 +38,21 @@ function Home() {
       );
     }
 
-    // Animate hero section
+    
     gsap.fromTo(
       '.hero-section',
       { opacity: 0, scale: 0.8 },
       { opacity: 1, scale: 1, duration: 1.5, ease: 'power2.out', scrollTrigger: { trigger: '.hero-section', start: 'top 80%' } }
     );
 
-    // Animate button
+    
     gsap.fromTo(
       '.fun-button',
       { y: 20, opacity: 0 },
       { y: 0, opacity: 1, duration: 1, ease: 'power2.out', scrollTrigger: { trigger: '.fun-button', start: 'top 80%' } }
     );
 
-    // Hover animation for photo
+  
     const photo = document.querySelector('.photo-placeholder');
     if (photo) {
       photo.addEventListener('mouseenter', () => {
@@ -83,8 +83,8 @@ function Home() {
         <div className="photo-placeholder"></div>
         <div className="intro-text">
           <h1 className="header-text">I am Thukha Minthwin</h1>
-          <p>I am from Rangsit University, passionate about creating modern and engaging web experiences.</p>
-          <button className="fun-button"><a href="tkmt/projects" className='extra'>Explore My Work</a></button>
+          <p>I am from Rangsit University, passionate about creating modern and engaging web experiences. Currently trying to become full-stack developer, starting out as frontend</p>
+          <button className="fun-button"><a href="/projects" className='extra'>Explore My Work</a></button>
         </div>
       </div>
     </div>

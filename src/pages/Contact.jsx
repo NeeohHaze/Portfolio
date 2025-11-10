@@ -12,7 +12,7 @@ function Contact() {
   const contactRef = useRef(null);
 
   useLayoutEffect(() => {
-    // Animate contact section
+  
     gsap.fromTo(
       '.contact-section',
       { opacity: 0, scale: 0.8 },
@@ -28,7 +28,7 @@ function Contact() {
       }
     );
 
-    // Animate button
+   
     gsap.fromTo(
       '.contact-button',
       { y: 20, opacity: 0 },
@@ -44,7 +44,7 @@ function Contact() {
       }
     );
 
-    // Animate icon placeholders
+    
     gsap.fromTo(
       '.icon-placeholder',
       { y: 20, opacity: 0 },
@@ -61,7 +61,7 @@ function Contact() {
       }
     );
 
-    // Hover animations for icons
+    
     const icons = document.querySelectorAll('.icon-placeholder');
     icons.forEach((icon) => {
       icon.addEventListener('mouseenter', () => {

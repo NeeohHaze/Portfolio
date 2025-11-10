@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function About() {
   useEffect(() => {
-    // Animate header with sliding mask
+
     const header = document.querySelector('.header-text');
     if (header) {
       gsap.fromTo(
@@ -28,7 +28,6 @@ function About() {
       );
     }
 
-    // Animate bio card
     gsap.fromTo(
       '.bio-card',
       { opacity: 0, x: -50 },
@@ -44,7 +43,6 @@ function About() {
       }
     );
 
-    // Animate content sections
     gsap.fromTo(
       '.about-section',
       { opacity: 0, y: 30 },
@@ -61,7 +59,7 @@ function About() {
       }
     );
 
-    // Animate button
+
     gsap.fromTo(
       '.resume-button',
       { opacity: 0, y: 20 },
@@ -121,7 +119,6 @@ function About() {
               <li>React: Proficient in building dynamic, component-based web applications</li>
               <li>JavaScript (ES6+): Strong knowledge of modern JavaScript for interactive features</li>
               <li>HTML & CSS: Expertise in responsive design and modern layouts</li>
-              <li>GSAP: Experience with animations for engaging user interfaces</li>
             </ul>
           </div>
           <div className="about-section">
@@ -135,11 +132,10 @@ function About() {
           <div className="about-section">
             <h3>Professional Experience</h3>
             <ul className="skills-list">
-              <li>Developed a personal portfolio website using React and GSAP</li>
+              <li>Developed a personal portfolio website using React</li>
               <li>Collaborated on university projects to build responsive web applications</li>
             </ul>
           </div>
-          <a href="/path/to/resume.pdf" download className="resume-button">Download Resume</a>
         </div>
       </div>
     </div>
